@@ -78,13 +78,9 @@ body {
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-    /* Show lines on every 4n+1 element */
     .card-line:nth-child(4n+1)::before,
     .card-line:nth-child(4n+1)::after {
         opacity: 1;
     }
-
-
-    
 }
 
