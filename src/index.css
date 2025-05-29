@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
@@ -48,30 +49,42 @@ body {
     @apply -rotate-45;
 }
 
-.card-line {
-    position: relative;
-}
-.card-line:nth-child(4n+1)::before, .card-line:nth-child(4n+1)::after {
-    opacity: 1;
-}
-.card-line::before, .card-line::after {
-    content: "";
-    position: absolute;
-    width: 200vw;
-    height: 1px;
-    left: -100vw;
-    background-color: rgba(24, 24, 27, 0.05);
-    opacity: 0;
-}
-.card-line::before {
-    top: 0;
-}
-.card-line::after {
-    bottom: 0;
-}
 
-.dark .card-line::before, 
-.dark .card-line::after {
-    background-color: rgba(255, 255, 255, 0.1);
+@layer utilities {
+    .card-line{
+        position:relative;
+    }
+    .card-line::before,
+    .card-line::after {
+        content: "";
+        position: absolute;
+        width: 200vw;
+        height: 1px;
+        left: -100vw;
+        background-color: rgba(24, 24, 27, 0.05);
+        opacity: 0;
+    }
+
+    .card-line::before {
+        top: 0;
+    }
+
+    .card-line::after {
+        bottom: 0;
+    }
+
+    .dark .card-line::before,
+    .dark .card-line::after {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Show lines on every 4n+1 element */
+    .card-line:nth-child(4n+1)::before,
+    .card-line:nth-child(4n+1)::after {
+        opacity: 1;
+    }
+
+
+    
 }
 
