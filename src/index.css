@@ -80,3 +80,21 @@ body {
     opacity: 1;
   }
 }
+
+.animate-partner-carousel {
+    animation: scroll-x 60s linear infinite;
+}
+
+.reverse {
+    animation-direction: reverse;
+}
+
+@keyframes scroll-x{
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
