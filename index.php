@@ -101,9 +101,6 @@ get_header(); ?>
             </div>
           </div>
         </div>
-
-
-
         <section class="">
           <div>
             <div class="relative line-border px-4 py-2 sm:px-2">
@@ -302,120 +299,319 @@ get_header(); ?>
             <p class="mt-4 max-w-2xl text-base/7 text-gray-600">to see all the cool projects we have worked on.</p>
           </div>
 
-          <div class="relative line-border mt-12">
-            <div class="flex whitespace-nowrap" role="tablist" aria-orientation="horizontal"><button class="border-r border-gray-950/5 p-3 hover:bg-gray-950/2 focus:not-data-focus:outline-none data-selected:bg-gray-950/2.5 sm:px-6" id="headlessui-tabs-tab-:Rb93kq:" role="tab" type="button" aria-selected="true" tabindex="0" data-headlessui-state="selected" aria-controls="headlessui-tabs-panel-:Rd93kq:" data-selected="">
-                <p class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600">Marketing</p>
-              </button><button class="border-r border-gray-950/5 p-3 hover:bg-gray-950/2 focus:not-data-focus:outline-none data-selected:bg-gray-950/2.5 sm:px-6" id="headlessui-tabs-tab-:Rj93kq:" role="tab" type="button" aria-selected="false" tabindex="-1" data-headlessui-state="" aria-controls="headlessui-tabs-panel-:Rl93kq:">
-                <p class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600">Application UI</p>
-              </button><button class="border-r border-gray-950/5 p-3 hover:bg-gray-950/2 focus:not-data-focus:outline-none data-selected:bg-gray-950/2.5 sm:px-6" id="headlessui-tabs-tab-:Rr93kq:" role="tab" type="button" aria-selected="false" tabindex="-1" data-headlessui-state="" aria-controls="headlessui-tabs-panel-:Rt93kq:">
-                <p class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600">Ecommerce</p>
-              </button></div>
-          </div>
+          <div class="" x-data="{ activeTab: 1 }">
+            <div
+              role="tablist"
+              @keydown.right.prevent.stop="$focus.wrap().next()"
+              @keydown.left.prevent.stop="$focus.wrap().prev()"
+              @keydown.home.prevent.stop="$focus.first()"
+              @keydown.end.prevent.stop="$focus.last()">
+              <div class="relative line-border mt-12">
+                <div class="flex whitespace-nowrap" role="tablist" aria-orientation="horizontal">
+                  <button
+                    id="tab-1"
+                    class="cursor-pointer border-r border-gray-950/5 dark:border-white/10 p-3 hover:bg-gray-950/2 focus:not-data-focus:outline-none data-selected:bg-gray-950/2.5 sm:px-6"
+                    :tabindex="activeTab === 1 ? 0 : -1"
+                    :aria-selected="activeTab === 1"
+                    aria-controls="tabpanel-1"
+                    @click="activeTab = 1"
+                    @focus="activeTab = 1">
+                    <span
+                      :class="activeTab === 1 ? 'text-indigo-600' : 'text-gray-600 group-hover:text-indigo-600'"
+                      class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase">
+                      Marketing
+                    </span>
+                  </button>
+                  <button
+                    id="tab-2"
+                    class="cursor-pointer border-r border-gray-950/5 dark:border-white/10 p-3 hover:bg-gray-950/2 focus:not-data-focus:outline-none data-selected:bg-gray-950/2.5 sm:px-6"
+                    :tabindex="activeTab === 2 ? 0 : -1"
+                    :aria-selected="activeTab === 2"
+                    aria-controls="tabpanel-2"
+                    @click="activeTab = 2"
+                    @focus="activeTab = 2">
+                    <span
+                      :class="activeTab === 2 ? 'text-indigo-600' : 'text-gray-600 group-hover:text-indigo-600'"
+                      class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase">
+                      Application UI
+                    </span>
+                  </button>
+                  <button
+                    id="tab-3"
+                    class="cursor-pointer border-r border-gray-950/5 dark:border-white/10 p-3 hover:bg-gray-950/2 focus:not-data-focus:outline-none data-selected:bg-gray-950/2.5 sm:px-6"
+                    :tabindex="activeTab === 3 ? 0 : -1"
+                    :aria-selected="activeTab === 3"
+                    aria-controls="tabpanel-3"
+                    @click="activeTab = 3"
+                    @focus="activeTab = 3">
+                    <span
+                      :class="activeTab === 3 ? 'text-indigo-600' : 'text-gray-600 group-hover:text-indigo-600'"
+                      class="font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase">
+                      Ecommerce
+                    </span>
+                  </button>
+                </div>
+              </div>
 
-          <div class="relative mt-4" id="headlessui-tabs-panel-:Rd93kq:" role="tabpanel" aria-labelledby="headlessui-tabs-tab-:Rb93kq:" tabindex="0" data-headlessui-state="selected" data-selected="">
-            <div class="pointer-events-none absolute inset-0 z-10 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2 sm:gap-x-5 sm:gap-y-10 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
-              <div class="border-r border-gray-950/5 dark:border-white/10"></div>
-              <div class="border-l border-gray-950/5 dark:border-white/10 lg:border-x"></div>
-              <div class="border-l border-gray-950/5 dark:border-white/10 max-lg:hidden xl:border-x"></div>
-              <div class="border-l border-gray-950/5 dark:border-white/10 max-xl:hidden"></div>
-            </div>
-            <ul class="relative gap-2 max-sm:line-border max-sm:flex max-sm:overflow-x-auto sm:grid sm:grid-cols-2 sm:gap-x-5 sm:gap-y-10 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
-              <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
-                <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
-                  <div class="p-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+              <div>
+                <!-- Panel #1 -->
+                <article class="relative mt-4"
+                  id="tabpanel-1"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="tab-1"
+                  x-show="activeTab === 1"
+                  x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 transform order-first"
+                  x-transition:enter-start="opacity-0 -translate-y-8"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-300 transform absolute"
+                  x-transition:leave-start="opacity-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 translate-y-12">
+                  <div class="pointer-events-none absolute inset-0 z-10 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2 sm:gap-x-5 sm:gap-y-10 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
+                    <div class="border-r border-gray-950/5 dark:border-white/10"></div>
+                    <div class="border-l border-gray-950/5 dark:border-white/10 lg:border-x"></div>
+                    <div class="border-l border-gray-950/5 dark:border-white/10 max-lg:hidden xl:border-x"></div>
+                    <div class="border-l border-gray-950/5 dark:border-white/10 max-xl:hidden"></div>
                   </div>
-                  <div class="px-4 py-2 sm:px-2">
-                    <p class="text-sm/6 font-medium dark:text-white">Hero Sections</p>
-                    <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                  <ul class="relative gap-2 max-sm:line-border max-sm:flex max-sm:overflow-x-auto sm:grid sm:grid-cols-2 sm:gap-x-5 sm:gap-y-10 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Marketing</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Marketing</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Marketing</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Marketing</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Marketing</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Marketing</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Marketing</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Marketing</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="pointer-events-none absolute inset-x-0 bottom-px z-10 flex h-100 items-end justify-center bg-linear-to-b to-white dark:to-gray-900 pb-8 max-sm:hidden">
+                    <a class="pointer-events-auto gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-950 px-4 py-2" href="https://tailwindcss.com/plus/ui-blocks/marketing">
+                      See more
+                      <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" class="-mr-0.5 w-2.5">
+                        <path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path>
+                      </svg>
+                    </a>
                   </div>
-                </a>
-              </li>
-              <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
-                <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
-                  <div class="p-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                </article>
+
+                <article class="relative mt-4"
+                  id="tabpanel-2"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="tab-2"
+                  x-show="activeTab === 2"
+                  x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 transform order-first"
+                  x-transition:enter-start="opacity-0 -translate-y-8"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-300 transform absolute"
+                  x-transition:leave-start="opacity-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 translate-y-12">
+                  <div class="pointer-events-none absolute inset-0 z-10 grid grid-cols-1 gap-2 max-sm:hidden sm:grid-cols-2 sm:gap-x-5 sm:gap-y-10 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
+                    <div class="border-r border-gray-950/5 dark:border-white/10"></div>
+                    <div class="border-l border-gray-950/5 dark:border-white/10 lg:border-x"></div>
+                    <div class="border-l border-gray-950/5 dark:border-white/10 max-lg:hidden xl:border-x"></div>
+                    <div class="border-l border-gray-950/5 dark:border-white/10 max-xl:hidden"></div>
                   </div>
-                  <div class="px-4 py-2 sm:px-2">
-                    <p class="text-sm/6 font-medium dark:text-white">Hero Sections</p>
-                    <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                  <ul class="relative gap-2 max-sm:line-border max-sm:flex max-sm:overflow-x-auto sm:grid sm:grid-cols-2 sm:gap-x-5 sm:gap-y-10 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Application UI</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Application UI</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Application UI</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Application UI</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Application UI</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Application UI</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Application UI</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
+                      <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
+                        <div class="p-2">
+                          <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                        </div>
+                        <div class="px-4 py-2 sm:px-2">
+                          <p class="text-sm/6 font-medium dark:text-white">Application UI</p>
+                          <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="pointer-events-none absolute inset-x-0 bottom-px z-10 flex h-100 items-end justify-center bg-linear-to-b to-white dark:to-gray-900 pb-8 max-sm:hidden">
+                    <a class="pointer-events-auto gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-950 px-4 py-2" href="https://tailwindcss.com/plus/ui-blocks/Application UI">
+                      See more
+                      <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" class="-mr-0.5 w-2.5">
+                        <path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path>
+                      </svg>
+                    </a>
                   </div>
-                </a>
-              </li>
-              <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
-                <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
-                  <div class="p-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
+                </article>
+
+                <article class="relative mt-4"
+                  id="tabpanel-3"
+                  role="tabpanel"
+                  tabindex="0"
+                  aria-labelledby="tab-3"
+                  x-show="activeTab === 3"
+                  x-transition:enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 transform order-first"
+                  x-transition:enter-start="opacity-0 -translate-y-8"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-300 transform absolute"
+                  x-transition:leave-start="opacity-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 translate-y-12">
+
+                  <div id="Square" class="relative flex justify-center items-center min-h-[500px]">
+                    <div class=" w-[10vw] h-[10vw] rounded-[1.2rem] bg-[#C2146D] shadow-[0_0_5px_30px_var(--P_color2),_0_0_10px_60px_var(--P_color3),_0_0_15px_90px_var(--P_color4),_0_0_20px_120px_var(--P_color5),_0_0_25px_150px_var(--P_color6)] rotate-[-21deg] flex justify-center items-center z-[1]">
+                      <h3 class="text-[4vw] text-[#1E0D37] translate-z-[90px] select-none shadow-[0_0_2px_rgba(0,0,0,0.6)]">404</h3>
+                    </div>
+                    <p class="text-[2vw] ml-2 text-[#1E0D37] dark:text-white translate-z-[90px] select-none uppercase">Data not found</p>
                   </div>
-                  <div class="px-4 py-2 sm:px-2">
-                    <p class="text-sm/6 font-medium dark:text-white">Hero Sections</p>
-                    <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
-                  </div>
-                </a>
-              </li>
-              <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
-                <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
-                  <div class="p-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
-                  </div>
-                  <div class="px-4 py-2 sm:px-2">
-                    <p class="text-sm/6 font-medium dark:text-white">Hero Sections</p>
-                    <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
-                  </div>
-                </a>
-              </li>
-              <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
-                <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
-                  <div class="p-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
-                  </div>
-                  <div class="px-4 py-2 sm:px-2">
-                    <p class="text-sm/6 font-medium dark:text-white">Hero Sections</p>
-                    <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
-                  </div>
-                </a>
-              </li>
-              <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
-                <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
-                  <div class="p-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
-                  </div>
-                  <div class="px-4 py-2 sm:px-2">
-                    <p class="text-sm/6 font-medium dark:text-white">Hero Sections</p>
-                    <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
-                  </div>
-                </a>
-              </li>
-              <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
-                <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
-                  <div class="p-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
-                  </div>
-                  <div class="px-4 py-2 sm:px-2">
-                    <p class="text-sm/6 font-medium dark:text-white">Hero Sections</p>
-                    <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
-                  </div>
-                </a>
-              </li>
-              <li class="card-line sm:max-lg:nth-[2n+1]:line-y lg:max-xl:nth-[3n+1]:line-y xl:nth-[4n+1]:line-y">
-                <a class="block transition hover:bg-gray-950/2.5 dark:hover:bg-gray-50/2.5 focus-visible:relative focus-visible:z-20 focus-visible:bg-white/75 focus-visible:backdrop-blur-sm" href="">
-                  <div class="p-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/web-project.jpg" class="aspect-708/480 rounded-md outline outline-gray-950/10 max-sm:h-48 max-sm:w-auto max-sm:max-w-none sm:w-full sm:rounded-xl lg:rounded-xl" width="708" height="480" alt="">
-                  </div>
-                  <div class="px-4 py-2 sm:px-2">
-                    <p class="text-sm/6 font-medium dark:text-white">Hero Sections</p>
-                    <p class="font-mono text-xs/6 tracking-wide text-gray-600 dark:text-white/50">12 components</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <div class="pointer-events-none absolute inset-x-0 bottom-px z-10 flex h-100 items-end justify-center bg-linear-to-b to-white dark:to-gray-900 pb-8 max-sm:hidden">
-              <a class="pointer-events-auto gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-950 px-4 py-2" href="https://tailwindcss.com/plus/ui-blocks/marketing">
-                See more
-                <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" class="-mr-0.5 w-2.5">
-                  <path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path>
-                </svg>
-              </a>
+                </article>
+              </div>
             </div>
           </div>
         </section>
