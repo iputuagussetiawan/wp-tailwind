@@ -615,7 +615,6 @@ get_header(); ?>
             </div>
           </div>
         </section>
-
         <section class="relative  mt-22 line-border grid grid-cols-1 gap-10 lg:grid-cols-2">
           <div class="lg:border-r lg:border-gray-950/5 dark:border-white/10">
             <div class="grid grid-cols-1 gap-y-2 px-4 py-2 max-lg:line-b sm:px-2 lg:line-b/half border-b border-gray-950/5 dark:border-white/10">
@@ -660,11 +659,10 @@ get_header(); ?>
             </div>
           </div>
         </section>
-
         <section>
-          <div class="flex min-w-full grow flex-col overflow-visible focus-within:pause hover:pause">
-            <div role="marquee" aria-label="partner logos carousel" class="flex min-w-[100%] grow select-none gap-elementXSmall overflow-hidden [animation-play-state:inherit] lg:gap-elementSmall">
-              <div class="animate-partner-carousel flex min-w-[100%] shrink-0 items-center justify-around overflow-visible [animation-play-state:inherit] [gap:inherit]">
+          <div class="flex min-w-full grow flex-col overflow-visible ">
+            <div class="group flex min-w-[100%] grow select-none gap-elementXSmall overflow-hidden lg:gap-elementSmall">
+              <div class="animate-partner-carousel group-hover:[animation-play-state:paused] flex min-w-[100%] shrink-0 items-center justify-around overflow-visible [animation-play-state:inherit] [gap:inherit]">
                 <a class="grid aspect-video shrink-0 grow-0 place-items-center justify-center px-inc40  h-[96px] w-[176px] lg:h-[128px] lg:w-[336px]" href="https://cloud.mongodb.com/ecosystem/confluent" target="_blank" rel="noreferrer" tabindex="0">
                   <img class="h-full max-h-[32px] w-auto max-w-[96px] object-contain lg:max-h-[48px] lg:max-w-[144px]" src="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt6b7ce9927224420b/64d62fc9d62acf0c89d9eaa4/kzpulv998d4x9q545-logo-confluent.svg" alt="confluent logo">
                 </a>
@@ -687,7 +685,7 @@ get_header(); ?>
                   <img class="h-full max-h-[32px] w-auto max-w-[96px] object-contain lg:max-h-[48px] lg:max-w-[144px]" src="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt2c5cf94d677bbe92/64d279cce965ce82b1ee9c57/HashiCorp_PrimaryLogo_Black_RGB.svg" alt="Hashicorp logo">
                 </a>
               </div>
-              <div class="animate-partner-carousel flex min-w-[100%] shrink-0 items-center justify-around overflow-visible [animation-play-state:inherit] [gap:inherit]" aria-hidden="true">
+              <div class="animate-partner-carousel group-hover:[animation-play-state:paused] flex min-w-[100%] shrink-0 items-center justify-around overflow-visible [animation-play-state:inherit] [gap:inherit]" aria-hidden="true">
                 <a class="grid aspect-video shrink-0 grow-0 place-items-center justify-center px-inc40  h-[96px] w-[176px] lg:h-[128px] lg:w-[336px]" href="https://cloud.mongodb.com/ecosystem/confluent" target="_blank" rel="noreferrer" tabindex="0">
                   <img class="h-full max-h-[32px] w-auto max-w-[96px] object-contain lg:max-h-[48px] lg:max-w-[144px]" src="https://images.contentstack.io/v3/assets/blt7151619cb9560896/blt6b7ce9927224420b/64d62fc9d62acf0c89d9eaa4/kzpulv998d4x9q545-logo-confluent.svg" alt="confluent logo"></a>
                 <a class="grid aspect-video shrink-0 grow-0 place-items-center justify-center px-inc40  h-[96px] w-[176px] lg:h-[128px] lg:w-[336px]" href="https://cloud.mongodb.com/ecosystem/databricks" target="_blank" rel="noreferrer" tabindex="0">
