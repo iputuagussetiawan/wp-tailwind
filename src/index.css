@@ -1,86 +1,82 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-    font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
-.heading-one{
-    @apply text-4xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl dark:text-white
+.heading-one {
+	@apply text-4xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl dark:text-white;
 }
 
-.heading-two{
-    @apply text-2xl tracking-tighter text-balance max-sm:px-4 sm:text-4xl lg:text-4xl xl:text-4xl dark:text-white
+.heading-two {
+	@apply text-2xl tracking-tighter text-balance max-sm:px-4 sm:text-4xl lg:text-4xl xl:text-4xl dark:text-white;
 }
 
-.left-border{
-    @apply col-start-1 row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 md:block dark:[--pattern-fg:var(--color-white)]/10
+.left-border {
+	@apply col-start-1 row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 md:block dark:[--pattern-fg:var(--color-white)]/10;
 }
 
-.line-border{
-    @apply before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]
+.line-border {
+	@apply before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-gray-950/5 after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw] after:bg-gray-950/5 dark:before:bg-white/10 dark:after:bg-white/10;
 }
 
-.card-line-y{
-    @apply before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]
+.card-line-y {
+	@apply before:absolute before:top-0 before:-left-[100vw] before:h-px before:w-[200vw] before:bg-gray-950/5 after:absolute after:bottom-0 after:-left-[100vw] after:h-px after:w-[200vw] after:bg-gray-950/5 dark:before:bg-white/10 dark:after:bg-white/10;
 }
 
-
-.right-border{
-    @apply row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 md:col-start-3 md:block dark:[--pattern-fg:var(--color-white)]/10
+.right-border {
+	@apply row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 md:col-start-3 md:block dark:[--pattern-fg:var(--color-white)]/10;
 }
 
 .hamburger-line {
-    @apply my-2 block h-[2px] w-[30px] bg-black;
+	@apply my-2 block h-[2px] w-[30px] bg-black;
 }
 
 .hamburger-active > span:nth-child(1) {
-    @apply rotate-45;
+	@apply rotate-45;
 }
 
 .hamburger-active > span:nth-child(2) {
-    @apply scale-0;
+	@apply scale-0;
 }
 
 .hamburger-active > span:nth-child(3) {
-    @apply -rotate-45;
+	@apply -rotate-45;
 }
 
+@layer components {
+  .card-line {
+    position: relative;
+  }
+  .card-line::before,
+  .card-line::after {
+    content: "";
+    position: absolute;
+    width: 200vw;
+    height: 1px;
+    left: -100vw;
+    background-color: rgba(24, 24, 27, 0.05);
+    opacity: 0;
+  }
 
-@layer utilities {
-    .card-line{
-        position:relative;
-    }
-    .card-line::before,
-    .card-line::after {
-        content: "";
-        position: absolute;
-        width: 200vw;
-        height: 1px;
-        left: -100vw;
-        background-color: rgba(24, 24, 27, 0.05);
-        opacity: 0;
-    }
+  .card-line::before {
+    top: 0;
+  }
 
-    .card-line::before {
-        top: 0;
-    }
+  .card-line::after {
+    bottom: 0;
+  }
 
-    .card-line::after {
-        bottom: 0;
-    }
+  .dark .card-line::before,
+  .dark .card-line::after {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
-    .dark .card-line::before,
-    .dark .card-line::after {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .card-line:nth-child(4n+1)::before,
-    .card-line:nth-child(4n+1)::after {
-        opacity: 1;
-    }
+  .card-line:nth-child(4n + 1)::before,
+  .card-line:nth-child(4n + 1)::after {
+    opacity: 1;
+  }
 }
-

@@ -11,7 +11,7 @@ get_header(); ?>
           <p class="font-mono text-[1rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600">We're professional of helping you start your business</p>
         </div>
         <div class="relative line-border">
-          <h1 class="heading-one">Grow your business <br> with Baledigital</h1>
+          <h1 class="heading-one">Grow your business <br> with Your Company</h1>
         </div>
         <div class="grid grid-cols-1 gap-10 xl:grid-cols-2">
           <div class="relative pt-12 sm:pt-20 xl:border-r xl:border-gray-950/5 xl:py-40">
@@ -75,7 +75,7 @@ get_header(); ?>
               </div>
             </div>
             <div class="mt-5 px-2 py-2 max-xl:line-y max-sm:px-4 xl:line-y/half space-y-4">
-              <p class="max-w-2xl text-lg/7 font-medium text-pretty text-gray-600">BALE DIGITAL is a company engaged in digital, which provides development services based applications Website, Mobile (Android and IOS) and Desktop. We also handle Digital Marketing and are based in Bali, Indonesia.</p>
+              <p class="max-w-2xl text-lg/7 font-medium text-pretty text-gray-600">YOUR COMPANY is a company engaged in digital, which provides development services based applications Website, Mobile (Android and IOS) and Desktop. We also handle Digital Marketing and are based in Bali, Indonesia.</p>
               <p class="max-w-2xl text-lg/7 font-medium text-pretty text-gray-600">As an IT company, we always provide the best solution in accordance with the needs of our clients.</p>
               <p class="max-w-2xl text-lg/7 font-medium text-pretty text-gray-600">In digital marketing services we have a way to help you market products according to your business and target market. By giving priority to the quality of service, we will give the best for you.</p>
             </div>
@@ -464,54 +464,17 @@ get_header(); ?>
             </div>
           </div>
         </section>
-
-        <div class="bg-gray-300 flex justify-center items-center h-full h-screen p-8">
-          <div
-            x-data="{ open: false }"
-            class="relative">
-            <button
-              x-on:click="open = true"
-              class="flex items-center bg-white focus:bg-gray-400 text-gray-700 focus:text-gray-900 font-semibold rounded focus:outline-none focus:shadow-inner py-2 px-4"
-              type="button">
-              <span class="mr-1">Dropdown</span>
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="margin-top:3px">
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-              </svg>
-            </button>
-            <ul
-              x-show="open"
-              x-on:click.away="open = false"
-              class="bg-white text-gray-700 rounded shadow-lg absolute py-2 mt-1 right-0"
-              style="min-width:15rem">
-              <li>
-                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
-                  Mont Blanc
-                </a>
-              </li>
-              <li>
-                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
-                  Monte Rosa
-                </a>
-              </li>
-              <li>
-                <a href="#" class="block hover:bg-gray-200 whitespace-no-wrap py-2 px-4">
-                  Dom <span class="text-gray-400">(no good)</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
         <footer class="col-start-3 row-start-2 max-sm:col-span-full max-sm:col-start-1 @container grid w-full px-4 sm:px-2">
           <div class="mt-40">
             <div class="line-border relative py-2">
               <a class="shrink-0 d-inline-block" aria-label="Home" href="/">
-                <img class="w-[150px]" src="<?php echo get_template_directory_uri() . '/public/images/logo_white.png'; ?>" alt="Bale Digital">
+                <img class="w-[150px]" src="https://placehold.co/200x40?text=Company+Logo" alt="your company logo">
               </a>
             </div>
           </div>
           <div class="line-border relative mt-16 flex flex-col gap-x-3 py-2 text-sm/7 text-nowrap text-gray-600 lg:gap-x-4 @lg:flex-row">
-            <p>© <?php echo date('Y'); ?> Bale Digital. All rights reserved.</p>
-            <div class="h-full w-px bg-gray-950/5 dark:bg-gray-50/5 @max-lg:hidden"></div>
+            <p>© <?php echo date("Y"); ?> Your Company. All rights reserved.</p>
+            <div class="h-full w-px bg-gray-950/5 dark:bg-white/10 @max-lg:hidden"></div>
             <a class="hover:text-gray-950 dark:hover:text-gray-50 ease-in-out duration-400" href="/plus/privacy-policy">Privacy policy</a>
           </div>
         </footer>
