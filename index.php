@@ -118,7 +118,7 @@ get_header(); ?>
                 @keydown.end.prevent.stop="$focus.last()">
                 <button
                   id="tab-1"
-                  class="group relative flex items-center justify-center gap-4 p-4 focus:not-data-focus:outline-none text-gray-600 max-lg:flex-col sm:p-6"
+                  class="cursor-pointer group relative flex items-center justify-center gap-4 p-4 focus:not-data-focus:outline-none text-gray-600 max-lg:flex-col sm:p-6"
                   :class="activeTab === 1 ? 'text-indigo-600' : 'text-gray-600 hover:text-indigo-600'"
                   :tabindex="activeTab === 1 ? 0 : -1"
                   :aria-selected="activeTab === 1"
@@ -138,7 +138,7 @@ get_header(); ?>
                 <button
                   id="tab-2"
                   :class="activeTab === 2 ? 'text-pink-600' : 'text-gray-600 hover:text-pink-600'"
-                  class="group relative flex items-center justify-center gap-4 p-4 focus:outline-none text-gray-600 data-selected:text-pink-600 max-lg:flex-col sm:p-6"
+                  class="cursor-pointer group relative flex items-center justify-center gap-4 p-4 focus:outline-none text-gray-600 data-selected:text-pink-600 max-lg:flex-col sm:p-6"
                   :tabindex="activeTab === 2 ? 0 : -1"
                   :aria-selected="activeTab === 2"
                   aria-controls="tabpanel-2"
@@ -158,7 +158,7 @@ get_header(); ?>
                 <button
                   id="tab-3"
                   :class="activeTab === 3 ? 'text-sky-600' : 'text-gray-600 hover:text-sky-600'"
-                  class="group relative flex items-center justify-center gap-4 p-4 focus:not-data-focus:outline-none text-gray-600 max-lg:flex-col sm:p-6"
+                  class="cursor-pointer group relative flex items-center justify-center gap-4 p-4 focus:not-data-focus:outline-none text-gray-600 max-lg:flex-col sm:p-6"
                   :tabindex="activeTab === 3 ? 0 : -1"
                   :aria-selected="activeTab === 3"
                   aria-controls="tabpanel-3"
