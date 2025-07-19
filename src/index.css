@@ -48,53 +48,52 @@ body {
 }
 
 @layer components {
-  .card-line {
-    position: relative;
-  }
-  .card-line::before,
-  .card-line::after {
-    content: "";
-    position: absolute;
-    width: 200vw;
-    height: 1px;
-    left: -100vw;
-    background-color: rgba(24, 24, 27, 0.05);
-    opacity: 0;
-  }
+	.card-line {
+		position: relative;
+	}
+	.card-line::before,
+	.card-line::after {
+		content: "";
+		position: absolute;
+		width: 200vw;
+		height: 1px;
+		left: -100vw;
+		background-color: rgba(24, 24, 27, 0.05);
+		opacity: 0;
+	}
 
-  .card-line::before {
-    top: 0;
-  }
+	.card-line::before {
+		top: 0;
+	}
 
-  .card-line::after {
-    bottom: 0;
-  }
+	.card-line::after {
+		bottom: 0;
+	}
 
-  .dark .card-line::before,
-  .dark .card-line::after {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+	.dark .card-line::before,
+	.dark .card-line::after {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
 
-  .card-line:nth-child(4n + 1)::before,
-  .card-line:nth-child(4n + 1)::after {
-    opacity: 1;
-  }
+	.card-line:nth-child(4n + 1)::before,
+	.card-line:nth-child(4n + 1)::after {
+		opacity: 1;
+	}
 }
 
 .animate-partner-carousel {
-    animation: scroll-x 60s linear infinite;
+	animation: scroll-x 60s linear infinite;
 }
 
 .reverse {
-    animation-direction: reverse;
+	animation-direction: reverse;
 }
 
-@keyframes scroll-x{
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(-100%);
-  }
+@keyframes scroll-x {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }
-

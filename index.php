@@ -743,13 +743,18 @@ get_header(); ?>
           <div class="mx-auto w-full ">
               <div class="md:flex md:justify-between">
                   <div class="mb-6 md:mb-0">
-                      <a href="https://flowbite.com" class="flex items-center">
-                          <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
-                          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                      <a href="" class="flex items-end mb-1" >
+                          <img src="<?php echo get_template_directory_uri() .
+                          	"/public/images/logo-only.png"; ?>" class="h-8 mr-1" alt=" Logo" />
+                          <span class="text-2xl font-semibold whitespace-nowrap dark:text-white">Baledigital</span>
                       </a>
-                      <p>Bali, Indonesia</p>
-                      <p>08123456789</p>
-                      <p>5lA4o@example.com</p>
+                      <div class="mb-6 text-sm font-semibold text-gray-900 dark:text-white">
+                        <p>Bali, Indonesia</p>
+                      </div>
+                      <div class="text-sm font-semibold text-gray-900 dark:text-white">
+                        <p>08123456789</p>
+                        <p>5lA4o@example.com</p>
+                      </div>
                   </div>
                   <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                       <div>
@@ -787,10 +792,12 @@ get_header(); ?>
                           <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Discuss your needs with us</h2>
                           <ul class="text-gray-600 dark:text-gray-400">
                               <li class="mb-4">
-                                  <a href="#" class="hover:underline">Privacy Policy</a>
-                              </li>
-                              <li>
-                                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                  <a class="gap-2 inline-flex justify-center rounded-full text-sm/6 font-semiboldz-1 max-sm:hidden  bg-black font-semibold text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 px-4 py-2" href="/plus/ui-blocks/preview">
+                                    Consultation
+                                    <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" class="-mr-0.5 w-2.5">
+                                      <path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path>
+                                    </svg>
+                                  </a>
                               </li>
                           </ul>
                       </div>
@@ -798,7 +805,9 @@ get_header(); ?>
               </div>
               <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
               <div class="sm:flex sm:items-center sm:justify-between">
-                  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+                  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© <?php echo date(
+                  	"Y"
+                  ); ?> <a href="https://flowbite.com" class="hover:underline">Baledigital</a>. All Rights Reserved.
                   </span>
                   <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                       <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ease-in-out duration-400">
