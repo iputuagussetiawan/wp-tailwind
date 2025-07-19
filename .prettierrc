@@ -1,6 +1,6 @@
 {
 	"useTabs": true,
-	"tabWidth": 2,
+	"tabWidth": 4,
 	"plugins": ["prettier-plugin-tailwindcss", "@prettier/plugin-php"],
 	"htmlWhitespaceSensitivity": "ignore"
 }
