@@ -525,12 +525,15 @@ get_header(); ?>
           <div class="mt-40">
             <div class="line-border relative py-2">
               <a class="shrink-0 d-inline-block" aria-label="Home" href="/">
-                <img class="w-[150px]" src="<?php echo get_template_directory_uri() . '/public/images/logo_white.png'; ?>" alt="Bale Digital">
+                <img class="w-[150px]" src="<?php echo get_template_directory_uri() .
+                	"/public/images/logo_white.png"; ?>" alt="Bale Digital">
               </a>
             </div>
           </div>
           <div class="line-border relative mt-16 flex flex-col gap-x-3 py-2 text-sm/7 text-nowrap text-gray-600 lg:gap-x-4 @lg:flex-row">
-            <p>© <?php echo date('Y'); ?> Bale Digital. All rights reserved.</p>
+            <p>© <?php echo date(
+            	"Y"
+            ); ?> Bale Digital. All rights reserved.</p>
             <div class="h-full w-px bg-gray-950/5 dark:bg-gray-50/5 @max-lg:hidden"></div>
             <a class="hover:text-gray-950 dark:hover:text-gray-50 ease-in-out duration-400" href="/plus/privacy-policy">Privacy policy</a>
           </div>

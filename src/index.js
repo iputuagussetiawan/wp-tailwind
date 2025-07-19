@@ -1,13 +1,13 @@
-import Person from "./scripts/Person"
-import ExampleReactComponent from "./scripts/ExampleReactComponent"
-import React from "react"
-import ReactDOM from "react-dom/client"
+import Person from "./scripts/Person";
+import ExampleReactComponent from "./scripts/ExampleReactComponent";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import Alpine from 'alpinejs'
+import Alpine from "alpinejs";
 
-window.Alpine = Alpine
+window.Alpine = Alpine;
 
-Alpine.start()
+Alpine.start();
 
 // const person1 = new Person("Brad")
 // if (document.querySelector("#render-react-example-here")) {

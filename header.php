@@ -1,19 +1,18 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="dark dark:bg-gray-950">
-
 <head>
-  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta charset="<?php bloginfo("charset"); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div class="fixed inset-x-0 top-0 z-10 border-b border-black/5 dark:border-white/10">
+  <div class="fixed inset-x-0 top-0 z-10 border-b border-black/5 dark:border-white/10">
     <div class="bg-white dark:bg-gray-950">
       <div class="flex h-14 items-center justify-between gap-8 px-4 sm:px-6">
         <div class="flex items-center gap-4">
           <a class="shrink-0 d-inline-block" aria-label="Home" href="/">
-            <img class="w-[150px]" src="<?php echo get_template_directory_uri() . '/public/images/logo_white.png'; ?>" alt="Bale Digital">
+            <img class="w-[150px]" src="https://placehold.co/200x40?text=Company+Logo" alt="Your Company">
           </a>
         </div>
         <div class="flex items-center gap-6 max-md:hidden">
@@ -27,8 +26,49 @@
           <a class="text-sm/6 text-gray-950 dark:text-white" href="/docs">About</a>
           <a class="text-sm/6 text-gray-950 dark:text-white" href="/blog">Blog</a>
           <a class="text-sm/6 text-gray-950 dark:text-white" href="/showcase">Contact Us</a>
+          <div
+            x-data="{ open: false }"
+            class="relative">
+            <button
+              x-on:click="open = true"
+              class="cursor-pointer flex items-center text-sm/6 text-gray-950 dark:text-white focus:text-gray-900 dark:focus:text-gray-100 focus:outline-none focus:shadow-inner py-2"
+              type="button">
+              <span 
+              :class="open === true ? 'text-blue-600 dark:text-blue-400' : ''"
+              class="mr-1 transition-all duration-200 ease-in-out"
+              >Dropdown Menu</span>
+              <!-- <svg :class="{'transform rotate-180 text-blue-600' : open == true}" class="fill-current h-4 w-4 transition-all ease-in-out duration-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg> -->
+
+              <svg :class="{'transform rotate-180 text-blue-600' : open == true}" class="w-4 h-4 transition-all ease-in-out duration-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <ul
+              x-show="open"
+              x-on:click.away="open = false"
+              class="bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 shadow-lg absolute mt-1 right-0"
+              style="min-width:15rem">
+              <li>
+                <a href="#" class="block text-sm/6 hover:bg-gray-200 dark:hover:bg-gray-700 whitespace-no-wrap py-2 px-4">
+                  Mont Blanc
+                </a>
+              </li>
+              <li>
+                <a href="#" class="block text-sm/6 hover:bg-gray-200 dark:hover:bg-gray-700 whitespace-no-wrap py-2 px-4">
+                  Monte Rosa
+                </a>
+              </li>
+              <li>
+                <a href="#" class="block text-sm/6 hover:bg-gray-200 dark:hover:bg-gray-700 whitespace-no-wrap py-2 px-4">
+                  Dom <span class="text-gray-400">(no good)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="flex items-center gap-2.5 md:hidden">
+        <div class="flex items-center gap-2.5 md:hidden ">
           <button type="button" aria-label="Search" class="inline-grid size-7 place-items-center rounded-md">
             <svg viewBox="0 0 16 16" fill="currentColor" class="size-4">
               <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path>
@@ -43,4 +83,4 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>
