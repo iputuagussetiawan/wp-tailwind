@@ -6,7 +6,7 @@
 								<div class="mb-6 md:mb-0">
 									<a href="" class="flex items-end mb-1">
 										<img src="<?php echo get_template_directory_uri() .
-														"/public/images/logo-only.png"; ?>" class="h-8 mr-1" alt=" Logo" />
+          	"/public/images/logo-only.png"; ?>" class="h-8 mr-1" alt=" Logo" />
 										<span class="text-2xl font-semibold whitespace-nowrap dark:text-white">Baledigital</span>
 									</a>
 									<div class="mb-6 text-sm font-semibold text-gray-900 dark:text-white">
@@ -67,8 +67,8 @@
 							<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 							<div class="sm:flex sm:items-center sm:justify-between">
 								<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© <?php echo date(
-																											"Y"
-																										); ?> <a href="https://flowbite.com" class="hover:underline">Baledigital</a>. All Rights Reserved.
+        	"Y"
+        ); ?> <a href="https://flowbite.com" class="hover:underline">Baledigital</a>. All Rights Reserved.
 								</span>
 								<div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
 									<a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ease-in-out duration-400">

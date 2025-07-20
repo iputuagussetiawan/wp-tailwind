@@ -1,8 +1,3 @@
-import Person from "./scripts/Person";
-import ExampleReactComponent from "./scripts/ExampleReactComponent";
-import React from "react";
-import ReactDOM from "react-dom/client";
-
 import Alpine from "alpinejs";
 
 window.Alpine = Alpine;

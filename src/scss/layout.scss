@@ -1,0 +1,63 @@
+@use "sass:map";
+@use "sass:math";
+@use "_config.scss" as *;
+
+// main Bootstrap Module
+@use "config/_init-bootstrap.scss";
+@use "config/_reset.scss" as *;
+@use "./components/layouts/_header.scss" as *;
+@use "./components/layouts/_footer.scss" as *;
+@use "./components/layouts/_section-global.scss" as *;
+@use "./components/ui/_buttons.scss" as *;
+@use "./components/ui/_offcanvas.scss" as *;
+@use "./components/ui/_burger-menu.scss" as *;
+@use "./components/ui/_lazy-image.scss";
+
+// |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾| //
+// | Timedoor New Standard                   | //
+// |_________________________________________| //
+
+/* root font-size variable -- start */
+:root {
+	@include fontVar();
+}
+/* root font-size variable -- end */
+
+/* create font-size class -- start */
+@include printFontClass();
+/* create font-size class -- end */
+
+/* ratio-item class -- start */
+.ratio-item {
+	@extend %ratioItem;
+}
+/* ratio-item class -- end */
+
+// |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾| //
+// | CUSTOM CODE START HERE                  | //
+// |_________________________________________| //
+
+// this code is only example, you can delete the code here
+.section {
+	&__title {
+		@include typo(display-1);
+	}
+
+	&__desc {
+		@include typo(nav-link, true, 3);
+	}
+}
+
+@media (min-width: 576px) {
+	.container-xl,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container {
+		max-width: 88%;
+	}
+}
+
+.grecaptcha-badge {
+	visibility: hidden !important;
+}

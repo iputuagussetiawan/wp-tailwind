@@ -1,0 +1,49 @@
+@use "../_config.scss" as *;
+
+body {
+	position: relative;
+	font-family: $primary-font;
+	// color:color(grey,700);
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #839376;
+	border-radius: 0px;
+	cursor: pointer;
+	transition: 0.4s ease;
+	&:hover {
+		background: color(primary);
+	}
+}
+
+::-moz-selection {
+	background-color: color(primary);
+	color: #ffffff;
+}
+
+::selection {
+	background-color: color(primary);
+	color: #ffffff;
+}
+
+a {
+	transition: 0.4s ease;
+	text-decoration: none;
+	color: color(primary);
+	&:hover {
+		text-decoration: none;
+	}
+}

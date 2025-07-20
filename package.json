@@ -9,11 +9,17 @@
 		"buildwp": "wp-scripts build",
 		"build": "npm-run-all --sequential buildwp tailwindbuild",
 		"wpstart": "wp-scripts start",
-		"start": "npm-run-all --parallel wpstart tailwindwatch clean",
+		"start": "npm-run-all --parallel wpstart tailwindwatch watch clean",
 		"tailwindbuild": "tailwindcss -i ./src/index.css -o ./build/index.css --minify",
 		"tailwindwatch": "tailwindcss -i ./src/index.css -o ./build/index.css --watch --minify",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"clean": "npx prettier . --write"
+		"clean": "npx prettier . --write",
+		"dev": "npm run development",
+		"development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress  --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"watch": "npm run development -- --watch",
+		"hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"prod": "npm run production",
+		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js  --config=node_modules/laravel-mix/setup/webpack.config.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -22,14 +28,21 @@
 		"@prettier/plugin-php": "^0.22.4",
 		"@tailwindcss/cli": "^4.1.8",
 		"@tailwindcss/typography": "^0.5.16",
-		"@wordpress/scripts": "^30.10.0",
+		"@wordpress/scripts": "^19.2.4",
 		"browser-sync": "^3.0.3",
+		"cross-env": "^7.0.3",
+		"laravel-mix": "^6.0.49",
 		"npm-run-all": "^4.1.5",
+		"postcss-custom-properties": "^13.1.3",
 		"prettier": "^3.6.2",
 		"prettier-plugin-tailwindcss": "^0.6.14",
+		"resolve-url-loader": "^5.0.0",
+		"sass": "^1.58.0",
+		"sass-loader": "^12.1.0",
 		"tailwindcss": "^4.1.8"
 	},
 	"dependencies": {
-		"alpinejs": "^3.14.9"
+		"alpinejs": "^3.14.9",
+		"swiper": "^11.2.10"
 	}
 }

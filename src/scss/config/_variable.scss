@@ -1,0 +1,260 @@
+@use "sass:map";
+@use "sass:math";
+
+// |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾| //
+// | tmdrVar v.1.0.2                         | //
+// | last update : 03 / 04 / 2024            | //
+// |_________________________________________| //
+
+$themeUnit: "vw";
+
+$desktopBreakpoints: (1920, 1600);
+
+$mobileBreakpoints: (991, 767, 480);
+
+// color example taken from Timedoor - Petrane Figma
+// https://www.figma.com/design/TAvIMAc18SOhop5Cs9he7t/Petrane?node-id=6-3&node-type=canvas&t=zFVBjA4RSoEmze7h-0
+
+$color: (
+	primary: (
+		default: #4e5d43,
+	),
+	secondary: (
+		default: #ffffff,
+	),
+	tertiary: (
+		default: #e9ecf1,
+	),
+	vanilla: (
+		default: #ebe3d9,
+		beige: #ddd1c0,
+		100: #f2ede5,
+		200: #e4dbcd,
+	),
+	brown: (
+		earth-brown: #3b2f2f,
+	),
+	pumpkin: (
+		default: #f6871f,
+	),
+	prussian-blue: (
+		default: #003559,
+	),
+	french-grey: (
+		default: #c5c4c9,
+	),
+	dutch-white: (
+		default: #fce6c4,
+	),
+	anti-flash-white: (
+		default: #e9ecf1,
+	),
+	baby-powder: (
+		default: #f8f4fd,
+	),
+	body: (
+		default: #6a6a6a,
+		50: rgba(106, 106, 106, 0.5),
+	),
+	pure-white: (
+		default: #ffffff,
+		50: rgba(255, 255, 255, 0.5),
+	),
+	black: (
+		default: #000000,
+	),
+	light-grey: (
+		default: #fbfbfb,
+	),
+	error: (
+		default: #ff1818,
+	),
+);
+
+// OPTIONAL - if default using color shade
+
+// $variant: (
+//     blue: (
+//         default: map.get($color, blue, 80),
+//     )
+// );
+
+// $color: map.deep-merge($color, $variant);
+
+// OPTIONAL - end
+
+$fontSizes: (
+	display-1: (
+		desktop: (
+			font-size: 70,
+			font-weight: 800,
+			line-height: 1.1,
+		),
+		mobile: (
+			font-size: 40,
+			text-decoration: underline,
+		),
+		480: (
+			text-transform: uppercase,
+		),
+	),
+	heading-1: (
+		desktop: (
+			font-size: 48,
+			font-weight: 800,
+			line-height: 1.1,
+		),
+		mobile: (
+			font-size: 32,
+		),
+	),
+	heading-2: (
+		desktop: (
+			font-size: 40,
+			font-weight: 600,
+			line-height: 1.1,
+		),
+		mobile: (
+			font-size: 24,
+		),
+	),
+	title-1: (
+		desktop: (
+			font-size: 18,
+			font-weight: 700,
+		),
+		mobile: (
+			font-size: 16,
+		),
+	),
+	body-xl-bold: (
+		desktop: (
+			font-size: 24,
+			font-weight: 600,
+		),
+		mobile: (
+			font-size: 20,
+		),
+	),
+	body-xl: (
+		desktop: (
+			font-size: 24,
+			line-height: 1.1,
+		),
+		mobile: (
+			font-size: 14,
+		),
+	),
+	body-l-bold: (
+		desktop: (
+			font-size: 20,
+			font-weight: 800,
+			line-height: 1.1,
+		),
+		mobile: (
+			font-size: 18,
+		),
+	),
+	body-l: (
+		desktop: (
+			font-size: 20,
+			line-height: 1.1,
+		),
+		mobile: (
+			font-size: 18,
+		),
+	),
+	body-m-medium: (
+		desktop: (
+			font-size: 18,
+			font-weight: 500,
+			line-height: 1.5,
+		),
+		mobile: (
+			font-size: 16,
+		),
+	),
+	body-m: (
+		desktop: (
+			font-size: 18,
+			line-height: 1.5,
+		),
+		mobile: (
+			font-size: 16,
+		),
+	),
+	body-s: (
+		desktop: (
+			font-size: 16,
+		),
+		mobile: (
+			font-size: 16,
+		),
+	),
+	nav-link: (
+		desktop: (
+			font-size: 18,
+		),
+		1199: (
+			font-size: 24,
+		),
+		767: (
+			font-size: 32,
+		),
+		mobile: (
+			font-size: 20,
+		),
+	),
+	button: (
+		desktop: (
+			font-size: 18,
+			font-weight: 500,
+			line-height: math.div(28, 18),
+		),
+		mobile: (
+			font-size: 18,
+		),
+	),
+	form-title: (
+		desktop: (
+			font-size: 18,
+			font-weight: 500,
+		),
+		mobile: (
+			font-size: 16,
+		),
+	),
+	table-header: (
+		desktop: (
+			font-size: 14,
+			font-weight: 500,
+			line-height: math.div(16, 14),
+		),
+		mobile: (
+			font-size: 14,
+		),
+	),
+	tag-bold: (
+		desktop: (
+			font-size: 14,
+			font-weight: 600,
+			line-height: math.div(16, 14),
+		),
+		mobile: (
+			font-size: 12,
+		),
+	),
+	tag: (
+		desktop: (
+			font-size: 14,
+			font-weight: 600,
+			line-height: math.div(16, 14),
+		),
+		mobile: (
+			font-size: 14,
+		),
+	),
+);
+
+$primary-font: "Work Sans", sans-serif;
+$secondary-font: "Geist", sans-serif;
