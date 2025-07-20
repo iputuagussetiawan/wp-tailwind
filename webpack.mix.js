@@ -3,10 +3,9 @@ const mix = require("laravel-mix");
 // mix.sass('source/scss/pages/home.scss', 'assets/css/pages/')
 //     .sourceMaps(true, 'source-map');
 
-mix.js("src/js/pages/home.js", "build/js/pages/").sourceMaps(
-	true,
-	"source-map",
-);
+mix.js("src/js/pages/home.js", "build/js/pages/")
+	.js("src/js/pages/about.js", "build/js/pages/")
+	.sourceMaps(true, "source-map");
 
 //Wordpress Custom Admin Login CSS
 mix.sass("src/scss/admin/login.scss", "build/css/admin")

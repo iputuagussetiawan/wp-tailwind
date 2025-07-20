@@ -12,8 +12,10 @@
         <div class="bg-white dark:bg-gray-950">
             <div class="flex h-14 items-center justify-between gap-8 px-4 sm:px-6">
                 <div class="flex items-center gap-4">
-                    <a class="shrink-0 d-inline-block" aria-label="Home" href="/">
-                        <img class="w-[150px]" src="https://placehold.co/200x40?text=Company+Logo" alt="Your Company">
+                    <a aria-label="Home" href="/" class="flex items-end mb-1">
+                        <img src="<?php echo get_template_directory_uri() .
+                                        "/public/images/logo-only.png"; ?>" class="h-8 mr-1" alt=" Logo" />
+                        <span class="text-2xl font-semibold whitespace-nowrap dark:text-white">Baledigital</span>
                     </a>
                 </div>
                 <div class="flex items-center gap-6 max-md:hidden">
@@ -36,7 +38,7 @@
                             type="button">
                             <span
                                 :class="open === true ? 'text-blue-600 dark:text-blue-400' : ''"
-                                class="mr-1 transition-all duration-200 ease-in-out">Dropdown Menu</span>
+                                class="mr-1 transition-all duration-200 ease-in-out">Our Service</span>
                             <svg :class="{'transform rotate-180 text-blue-600' : open == true}" class="w-4 h-4 transition-all ease-in-out duration-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                                 <path d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -86,5 +88,4 @@
         <div class="max-w-screen overflow-x-hidden">
             <div class="grid min-h-dvh grid-cols-1 grid-rows-[1fr_1px_auto_1px_auto] justify-center pt-14.25 [--gutter-width:2.5rem] md:-mx-4 md:grid-cols-[var(--gutter-width)_minmax(0,var(--breakpoint-2xl))_var(--gutter-width)] lg:mx-0">
                 <div class="left-border"></div>
-                    <div>
-                        
+                <div>

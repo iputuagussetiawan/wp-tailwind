@@ -1,5 +1,6 @@
 {
     "/build/js/pages/home.js": "/build/js/pages/home.js",
+    "/build/js/pages/about.js": "/build/js/pages/about.js",
     "/build/css/admin/colorScheme-client.css": "/build/css/admin/colorScheme-client.css",
     "/build/css/admin/colorScheme-tmdr.css": "/build/css/admin/colorScheme-tmdr.css",
     "/build/css/admin/login.css": "/build/css/admin/login.css"
