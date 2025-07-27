@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="dark dark:bg-gray-950">
+<html <?php language_attributes(); ?> class=" dark:bg-gray-950">
 
 <head>
     <meta charset="<?php bloginfo("charset"); ?>">
@@ -13,19 +13,18 @@
             <div class="flex h-14 items-center justify-between gap-8 px-4 sm:px-6">
                 <div class="flex items-center gap-4">
                     <a aria-label="Home" href="/" class="flex items-end mb-1">
-                        <img src="<?php echo get_template_directory_uri() .
-                                        "/public/images/logo-only.png"; ?>" class="h-8 mr-1" alt=" Logo" />
+                        <img src="<?php echo get_template_directory_uri() ."/public/images/logo-only.png"; ?>" class="h-8 mr-1" alt=" Logo" />
                         <span class="text-2xl font-semibold whitespace-nowrap dark:text-white">Baledigital</span>
                     </a>
                 </div>
                 <div class="flex items-center gap-6 max-md:hidden">
-                    <button type="button" class="inline-flex items-center gap-1 rounded-full bg-gray-950/2 px-2 py-1 inset-ring inset-ring-gray-950/8 dark:bg-white/5 dark:inset-ring-white/2">
+                    <!-- <button type="button" class="inline-flex items-center gap-1 rounded-full bg-gray-950/2 px-2 py-1 inset-ring inset-ring-gray-950/8 dark:bg-white/5 dark:inset-ring-white/2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="-ml-0.5 size-4 fill-gray-600 dark:fill-gray-500">
                             <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path>
                         </svg>
                         <kbd class="hidden font-sans text-xs/4 text-gray-500 dark:text-gray-400 [.os-macos_&amp;]:block">⌘K</kbd>
                         <kbd class="hidden font-sans text-xs/4 text-gray-500 not-[.os-macos_&amp;]:block dark:text-gray-400">Ctrl&nbsp;K</kbd>
-                    </button>
+                    </button> -->
                     <a class="text-sm/6 text-gray-950 dark:text-white" href="/docs">About</a>
                     <a class="text-sm/6 text-gray-950 dark:text-white" href="/blog">Blog</a>
                     <a class="text-sm/6 text-gray-950 dark:text-white" href="/showcase">Contact Us</a>
@@ -34,7 +33,7 @@
                         class="relative">
                         <button
                             x-on:click="open = true"
-                            class="cursor-pointer flex items-center text-sm/6 text-gray-950 dark:text-white focus:text-gray-900 dark:focus:text-gray-100 focus:outline-none focus:shadow-inner py-2"
+                            class="cursor-pointer flex items-center text-sm/6 text-gray-950 dark:text-white focus:text-gray-900 dark:focus:text-gray-100 focus:outline-none py-2"
                             type="button">
                             <span
                                 :class="open === true ? 'text-blue-600 dark:text-blue-400' : ''"
@@ -50,21 +49,34 @@
                             style="min-width:15rem">
                             <li>
                                 <a href="#" class="block text-sm/6 hover:bg-gray-200 dark:hover:bg-gray-700 whitespace-no-wrap py-2 px-4">
-                                    Mont Blanc
+                                    Ecommerce
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="block text-sm/6 hover:bg-gray-200 dark:hover:bg-gray-700 whitespace-no-wrap py-2 px-4">
-                                    Monte Rosa
+                                    E-invitation
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="block text-sm/6 hover:bg-gray-200 dark:hover:bg-gray-700 whitespace-no-wrap py-2 px-4">
-                                    Dom <span class="text-gray-400">(no good)</span>
+                                    Web Development
                                 </a>
                             </li>
+                            <li>
+                                <a href="#" class="block text-sm/6 hover:bg-gray-200 dark:hover:bg-gray-700 whitespace-no-wrap py-2 px-4">
+                                    Wordpress
+                                </a>
+                            </li>
+
+                            
                         </ul>
                     </div>
+                    <a class="gap-2 inline-flex justify-center rounded-full text-sm/6 font-semiboldz-1 max-sm:hidden  bg-black font-semibold text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 px-4 py-1 ease-in-out duration-400" href="/plus/ui-blocks/preview">
+                        Consultation
+                        <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" class="-mr-0.5 w-2.5">
+                            <path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path>
+                        </svg>
+                    </a>
                 </div>
                 <div class="flex items-center gap-2.5 md:hidden ">
                     <button type="button" aria-label="Search" class="inline-grid size-7 place-items-center rounded-md">

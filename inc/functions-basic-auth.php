@@ -9,8 +9,8 @@ function basic_auth_and_ip_whitelist()
 	$whitelisted_ips = ["127.0.0.1", "103.100.175.121"]; // Add your whitelisted IPs here (local and office IP)
 
 	// Basic Auth credentials
-	$auth_user = "timedoor";
-	$auth_pass = "tmdr#rendahvanilla"; // please chaneg following regulation
+	$auth_user = "baledigital";
+	$auth_pass = "#baledigital"; // please chaneg following regulation
 
 	// check if Search engine visibility is checked, if true, apply basic auth
 	// the settings is located in admin Settings -> Reading

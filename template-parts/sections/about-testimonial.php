@@ -4,8 +4,8 @@
             <p class="text-pink-600 font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase min-[105rem]:absolute min-[105rem]:top-0 min-[105rem]:-left-10 min-[105rem]:origin-bottom-right min-[105rem]:-translate-x-full min-[105rem]:-translate-y-full min-[105rem]:-rotate-90 min-[105rem]:pr-2">Testimonials</p>
             <h2 class="heading-two">What are they saying</h2>
         </div>
-        <div class="mt-4 px-2">
-            <div class="swiper mySwiper">
+        <div class="mt-4 px-2 pb-[42px]">
+            <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <figure class="group row-span-2 grid max-lg:mx-auto max-lg:max-w-3xl max-lg:gap-y-5 lg:grid-rows-subgrid border lg:border-gray-950/5 dark:border-white/10">
@@ -64,7 +64,10 @@
                         </figure>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                
+            </div>
+            <div class="relative mt-8">
+                <div class="swiper-pagination "></div>
             </div>
         </div>
     </div>
